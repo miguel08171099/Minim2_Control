@@ -1,11 +1,10 @@
 package com.vogella.android.minim2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,14 +14,14 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
         handler = new Handler();
         handler.postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, GithubUserActivity.class);
                 startActivity(intent);
             }
-        }, 4000);//La splash activity espera 4000 ms --> 3s
+        }, 4000);//La splash activity espera 4000 ms --> 4s
     }
 }

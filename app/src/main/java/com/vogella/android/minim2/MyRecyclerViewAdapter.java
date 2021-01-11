@@ -42,9 +42,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.txtViewTitle.setText(museumsList.get(position).getAdrecaNom());
-        Picasso.get().load(museumsList.get(position).getImatge().get(0)).into(viewHolder.imgViewIcon);
-        //viewHolder.txtViewPrice.setText(String.valueOf(productList.get(position).getPrice()));
     }
 
     @Override
@@ -54,13 +51,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView txtViewTitle;
-        public ImageView imgViewIcon;
+        public TextView txtViewTitle1;
+        public TextView txtViewTitle2;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            txtViewTitle = (TextView) itemLayoutView.findViewById(R.id.textView2);
-            imgViewIcon = (ImageView) itemLayoutView.findViewById(R.id.imageView);
+            txtViewTitle1 = (TextView) itemLayoutView.findViewById(R.id.textView7);
+            txtViewTitle2 = (TextView) itemLayoutView.findViewById(R.id.textView2);
         }
     }
 }
